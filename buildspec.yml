@@ -17,7 +17,7 @@ phases:
     commands:
       - aws s3 cp --recursive --acl public-read ./dist s3://web-app-hosting-jg/
       - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./dist/index.html s3://web-app-hosting-jg/
-      - aws cloudfront create-invalidation --distribution-id https://d1o242jbvhr1ly.cloudfront.net --paths /index.html
+      - aws cloudfront create-invalidation --distribution-id ETJWK1V66RMAU --paths /index.html
 artifacts:
   files:
     - "dist/*"
